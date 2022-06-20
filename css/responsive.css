@@ -57,6 +57,11 @@ nav{
 
 nav img, .logo{
     width: 30%;
+    animation-name: wiggle;
+    animation-iteration-count: 2;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease;
 }
 
 nav button{
@@ -79,6 +84,7 @@ header section{
     justify-content: space-evenly;
     align-items: center;
     padding: 2rem;
+    animation: show 5s ease-in-out forwards;
 }
 
 header section .hero-text, .hero-img{
@@ -174,6 +180,11 @@ aside{
     margin: 4rem auto -7rem;
     border-radius: 12px;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 5;
 }
 
 aside h2{
@@ -374,7 +385,7 @@ footer ul li a:hover{
     aside{
         margin: 6rem auto -17rem;
         /* width: 50%; */
-        width: max-content;
+        width: 60%;
         padding: 3rem;
     }
     aside h2{
@@ -428,4 +439,21 @@ footer ul li a:hover{
         padding-bottom: 1.5rem;
     }   
 
+}
+
+
+/* ANimation */
+@keyframes show{
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
+
+@keyframes move{
+    from {background-color: var(--Very-Pale-Cyan);} 
+    to {background-color: #fff;;}
+}
+
+@keyframes wiggle{
+    from {transform: rotateZ(360deg);}
+    to {transform: rotate(0deg);}
 }
